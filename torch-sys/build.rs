@@ -126,7 +126,7 @@ fn make<P: AsRef<Path>>(libtorch: P) {
         .flag(&format!("-D_GLIBCXX_USE_CXX11_ABI={}", libtorch_cxx11_abi))
         .file("libtch/torch_api.cpp")
         .warnings(false)
-        .compile("libtorch");
+        .compile("torch");
 }
 
 fn cmake<P: AsRef<Path>>(libtorch: P) {
